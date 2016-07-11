@@ -31,6 +31,6 @@ export class ColorsApp extends React.Component<{}, IColorsAppState> {
     this.setState(s => {
       s.colors.push(randomColor());
       return s;
-    })
+    });
   }
 }
