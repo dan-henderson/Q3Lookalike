@@ -21,7 +21,7 @@ export class ColorsApp extends React.Component<{}, IColorsAppState> {
   public render() {
     return <div>
       <button onClick={ e => this.handleClick(e) }>Add Block</button>
-      <div>
+      <div id="color-blocks">
         { this.colorBlocks }
       </div>
     </div>;

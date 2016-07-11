@@ -6,11 +6,7 @@ interface IColorBlockProps {
 
 export class ColorBlock extends React.Component<IColorBlockProps, {}> {
   public render() {
-    let blockStyle = {
-      backgroundColor: this.props.color,
-      height: "100px",
-      width: "100px"
-    };
-    return <div style={ blockStyle }></div>;
+    let blockStyle = { backgroundColor: this.props.color };
+    return <div className="color-block" style={ blockStyle }></div>;
   }
 }
