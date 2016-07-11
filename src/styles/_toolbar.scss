@@ -1,0 +1,16 @@
+$toolbarColor: #2d2d86;
+$buttonColor: lighten($toolbarColor, 30%);
+
+button {
+  background-color: $buttonColor;
+  border: none;
+  color: white;
+  padding: 5px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  &:hover {
+    background-color: lighten($buttonColor, 25%);
+  }
+}
