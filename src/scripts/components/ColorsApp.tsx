@@ -1,7 +1,36 @@
+import { ColorBlock } from "./ColorBlock";
+import randomColor = require("randomcolor");
 import * as React from "react";
 
-export class ColorsApp extends React.Component<{}, {}> {
+interface IColorsAppState {
+  colors: string[];
+}
+
+export class ColorsApp extends React.Component<{}, IColorsAppState> {
+  constructor() {
+    super();
+    this.state = { colors: [] };
+  }
+
+  private get colorBlocks() {
+    return this.state.colors.map((color, i) => {
+      return <ColorBlock key={ i } color={ color } />;
+    });
+  }
+
   public render() {
-    return <h1>Hello world!</h1>;
+    return <div>
+      <button onClick={ e => this.handleClick(e) }>Add Block</button>
+      <div>
+        { this.colorBlocks }
+      </div>
+    </div>;
+  }
+
+  private handleClick(e: React.MouseEvent) {
+    this.setState(s => {
+      s.colors.push(randomColor());
+      return s;
+    })
   }
 }
