@@ -6,16 +6,16 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 
 var TEST_DATA = [
-  {name: "Lunch @ 12:30", picture: "picture goes here",
+  {name: "Lunch @ 12:30",
   members: [
-    {name: "Dan", photo: "photo goes here"},
-    {name: "some guy", photo: "with another photo"}
+    {name: "Dan"},
+    {name: "some guy"}
   ]
 },
-{name: "Voleyball", picture: "picture goes here",
+{name: "Voleyball",
   members: [
-    {name: "Dan", photo: "photo goes here"},
-    {name: "some guy", photo: "with another photo"}
+    {name: "Dan"},
+    {name: "some other guy"}
   ]
 }
 ];

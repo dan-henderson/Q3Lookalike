@@ -11,7 +11,7 @@ export class QueueList extends React.Component<IQueueListProps, {}> {
     console.log("called QueueList render");
     let queueNodes = this.props.data.map(function(queue: any) {
       return (
-        <Queue name={queue.name} picture={queue.picture} members={queue.members}>
+        <Queue name={queue.name} members={queue.members}>
         </Queue>
       );
     });

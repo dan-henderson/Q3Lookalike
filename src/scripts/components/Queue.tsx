@@ -5,8 +5,7 @@ import * as React from "react";
 
 interface IQueueProps {
   name: string;
-  picture: any;
-  members: any;
+  members: string[];
 }
 
 export class Queue extends React.Component<IQueueProps, {}> {
@@ -15,7 +14,7 @@ export class Queue extends React.Component<IQueueProps, {}> {
     console.log("called Queue render");
     let memberNodes = this.props.members.map(function(person: any) {
       return (
-        <Person name={person.name} photo={person.photo}>
+        <Person name={person.name}>
         </Person>
       );
     });
@@ -24,7 +23,6 @@ export class Queue extends React.Component<IQueueProps, {}> {
         <h2>
           {this.props.name}
         </h2>
-        {this.props.picture}
         {memberNodes}
       </div>
     );
