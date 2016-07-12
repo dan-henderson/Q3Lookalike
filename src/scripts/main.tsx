@@ -7,16 +7,21 @@ import * as ReactDOM from "react-dom";
 
 var TEST_DATA = [
   {name: "Lunch @ 12:30", picture: "picture goes here",
-  members: { 1: {name: "Dan", picture: "photo goes here"},
-    2: {name: "some guy", picture: "with another photo"}
-  }
+  members: [
+    {name: "Dan", photo: "photo goes here"},
+    {name: "some guy", photo: "with another photo"}
+  ]
 },
 {name: "Voleyball", picture: "picture goes here",
-  members: { 1: {name: "Dan", picture: "photo goes here"},
-    2: {name: "some guy", picture: "with another photo"}
-  }
+  members: [
+    {name: "Dan", photo: "photo goes here"},
+    {name: "some guy", photo: "with another photo"}
+  ]
 }
 ];
 
 //ReactDOM.render(<ColorsApp />, document.getElementById("content"));
-ReactDOM.render(<Q3App />, document.getElementById("content"));
+ReactDOM.render(
+  <Q3App data={TEST_DATA} />,
+  document.getElementById("content")
+);

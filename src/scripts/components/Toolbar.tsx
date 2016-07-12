@@ -9,6 +9,7 @@ export class Toolbar extends React.Component<{}, {}> {
   }
 
   public render() {
+    console.log("called Toolbar render");
     return (
       <div>
         <div>
